@@ -7,3 +7,6 @@ read msg # read message for commit
 git commit -m "$msg" #publish commit
 echo "Pushing to your repository"
 git push origin master #push everything
+echo "Pull!"
+git pull
+
