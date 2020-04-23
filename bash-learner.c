@@ -16,13 +16,12 @@ int main()
    printf("In the shell you can move between 'folders' called directories the first command you will learn is pwd it shows in which directorie you are in. Try it write pwd! \n ");
    fgets(str, MAX_LIMIT, stdin);
    result = strcmp(str,"pwd");
-   sprintf(cmd, "%s\n", str);
-   system(cmd);
-   if(result == 0)
+   if(result == 10)
    {
         sprintf(cmd, "%s\n", str);
 	system(cmd);
-	printf("Good Job you just learned your first command.");
-   }	    
+	printf("Good Job you just learned your first command!");
+   }
+   printf("Now that you've learned how to see in what directorie you now need to know how to move from one directorie to another.");
    return 0;
 }
