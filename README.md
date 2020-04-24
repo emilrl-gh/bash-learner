@@ -9,6 +9,7 @@ git clone https://github.com/RazerSAISO/bash_learner.git
 then compile the code:
 
 ```
+cd bash_learner
 gcc bash-learner.c -o bashlearner
 ```
 then run:
