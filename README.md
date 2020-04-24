@@ -1,4 +1,4 @@
-# bash_learner
+# bash-learner
 This c program teaches you how to use the bash command line interface. I recommend to use a linux distro or macos.
 
 Clone the repository by writing this in the console
