@@ -20,8 +20,9 @@ int main()
    {
         sprintf(cmd, "%s\n", str);
 	system(cmd);
-	printf("Good Job you just learned your first command!");
+	printf("Good Job you just learned your first command!\n");
+      printf("Now that you've learned how to see in what directorie you now need to know how to move from one directorie to another.\n");	
+   
    }
-   printf("Now that you've learned how to see in what directorie you now need to know how to move from one directorie to another.");
    return 0;
 }
