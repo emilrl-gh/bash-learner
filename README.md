@@ -9,8 +9,8 @@ git clone https://github.com/RazerSAISO/bash_learner.git
 then compile the code:
 
 ```
-cd bash-le
-gcc bash-learner.c -o bashlearner
+cd bash_learner
+make
 ```
 then run:
 ```
