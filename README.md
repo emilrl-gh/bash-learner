@@ -12,7 +12,10 @@ then compile the code:
 cd bash_learner
 make
 ```
-
+to run it just write:
+```
+bash-learner
+```
 if there git is not installed install it:
 In debian based system:
 ```
