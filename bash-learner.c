@@ -21,10 +21,11 @@ int main()
         sprintf(cmd, "%s\n", str);
 	system(cmd);
 	printf("Good Job you just learned your first command!\n");
-        printf("Now that you've learned how to see in what directory you now need to know how to move from one directory to another. For that you need to know the command cd which stands for Change Directory\n");
+        printf("Now that you've learned how to see in what directory you now need to know how to move from one directory to another. For that you need to know the command cd which stands for Change Directory and add the name of the directory. It should look like this: cd nameofdirectory. Try it!: \n");
         fgets(str, MAX_LIMIT, stdin);
         result = strcmp(str,"cd");
-	if(result == 10)
+	printf("%d", result);
+        if(result == 10)
 	{
 	    sprintf(cmd, "%s\n", str);
             system(cmd);
