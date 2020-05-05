@@ -30,8 +30,17 @@ int main()
         }
         else
         {
-            printf("Good Job you just learned how to move from another directory to another.");
+            printf("Good Job you just learned how to move from another directory to another. \n");
+	    printf("Now you may think : Basher how do I see the possible directories in which I can go in ? \n ");
+	    printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Try it! :\n ");
+	    fgets(st,MAX_LIMIT, stdin);
+	    result = strcmp(st,"ls");
+            if (result == 10)
+            {
+	    	printf("\n Good Job ! You know how look at the directories! \n");
+	    }
         }
+
    }
    return 0;
 }
