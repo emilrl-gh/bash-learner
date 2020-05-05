@@ -12,9 +12,13 @@ then compile the code:
 cd bash_learner
 make
 ```
-to run it just write:
+If you are in linux to run just write:
 ```
 bash-learner
+```
+If you are on MacOS to run use:
+```
+./bash-learner
 ```
 if there git is not installed install it:
 In debian based system:
