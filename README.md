@@ -44,3 +44,7 @@ In MacOSX:
 ```
 brew install git
 ```
+To uninstall:
+```
+make uninstall
+```
