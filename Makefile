@@ -14,3 +14,13 @@ ifeq ($(detected_OS),Linux)
 endif
 output : bash-learner.c        
 	gcc -o output/bash-learner1 bash-learner.c
+uninstall : bash-learner
+ifeq ($(detected_OS),Darwin)
+		@echo $(detected_OS)
+		sudo mount -uw /
+		sudo rm /usr/bin/bash-learner
+endif
+ifeq ($(detected_OS),Linux)
+		@echo $(detected_OS)
+		sudo rm /bin/bash-learner
+endif
