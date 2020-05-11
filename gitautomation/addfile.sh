@@ -1,6 +1,4 @@
-echo "Give me the name of the file you want to update: "
-read file
-git add $file
+git add $1
 echo "What is your commit message ?"
 read msg
 git commit -m "$msg"
