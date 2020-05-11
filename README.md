@@ -18,7 +18,7 @@ bash-learner
 ```
 If you are on MacOS to run use:
 ```
-./bash-learner
+bash-learner
 ```
 if there git is not installed install it:
 In debian based system:
