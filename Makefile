@@ -10,7 +10,6 @@ ifeq ($(detected_OS),Linux)
 		@echo $(detected_OS)
 		gcc -o bash-learner bash-learner.c
 		sudo cp bash-learner /bin
-		bash-learner
 endif
 output : bash-learner.c        
 	gcc -o output/bash-learner1 bash-learner.c
