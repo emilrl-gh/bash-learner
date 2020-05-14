@@ -1,5 +1,4 @@
 # bash-learner
-[![Build Status](https://travis-ci.org/K0stad1n/bash_learner.svg?branch=master)](https://travis-ci.org/K0stad1n/bash_learner)
 
 This c program teaches you how to use the bash command line interface. I recommend to use a linux distro or macos.
 
