@@ -9,7 +9,7 @@ endif
 ifeq ($(detected_OS),Linux)
 		@echo $(detected_OS)
 		gcc -o bash-learner bash-learner.c
-		cp bash-learner /bin
+		sudo cp bash-learner /bin
 		bash-learner
 endif
 output : bash-learner.c        
