@@ -38,6 +38,7 @@ int main()
             if (result == 10)
             {
 	    	printf("\n Good Job ! You know how look at the directories! \n");
+		//test
 	    }
         }
 
