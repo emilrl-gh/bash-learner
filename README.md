@@ -35,7 +35,7 @@ sudo yum install git
 ```
 In Fedora:
 ```
-sudo dnf install git`
+sudo dnf install git
 ```
 or 
 ```
