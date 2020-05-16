@@ -1,4 +1,5 @@
 # bash-learner
+
 This c program teaches you how to use the bash command line interface. I recommend to use a linux distro or macos.
 
 Clone the repository by writing this in the console
@@ -12,7 +13,11 @@ then compile the code:
 cd bash_learner
 make
 ```
-to run it just write:
+If you are in linux to run just write:
+```
+bash-learner
+```
+If you are on MacOS to run use:
 ```
 bash-learner
 ```
@@ -39,4 +44,8 @@ sudo yum install git
 In MacOSX:
 ```
 brew install git
+```
+To uninstall:
+```
+make uninstall
 ```
