@@ -1,5 +1,6 @@
 /* Author: RazerSAISO */
 /* This program will guide you through learning the command line interface (CLI) mainly the bash shell */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -62,7 +63,7 @@ int main()
 		if (result == 10)
 		{ 
                     sprintf(cmd, "%s\n", st);
-                    system(cmd);
+                    system(cmd);//run command from user input
 		}
 
 		
