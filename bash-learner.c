@@ -9,6 +9,7 @@
 
 int main()
 {
+   char var;
    char st[MAX_LIMIT];
    char cmd[100];
    char compar[] = "cd"; //This is the string that we will that we will compare later.   
@@ -16,14 +17,18 @@ int main()
    char ch;
    int result;
    FILE *fp;
-
-   fp = fopen("place.txt", "w+");//open place.txt
-   fprintf(fp,"pwd\n");//write 
+   
+   fp = fopen("place.txt", "rb");//open place.txt
+   while ((var=fgetc(fp)) != EOF)
+   printf("%c", var);
+   fprintf(fp,"pwd\n");//write
+    
    if(fp == NULL)
    {
       printf("Error! Could not create a text file. Please report this error on GitHub");   
       exit(1);             
    }
+    
    printf("Hello and Welcome to bash learner, I am you're bash teacher my name is Basher. What's you're name ?\n");
    fgets(st, MAX_LIMIT, stdin); 
    printf("Hi %s", st);
