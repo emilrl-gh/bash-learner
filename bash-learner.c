@@ -1,4 +1,4 @@
-/* Author: RazerSAISO */
+/* Author: K0stad1n */
 /* This program will guide you through learning the command line interface (CLI) mainly the bash shell */
 
 #include <stdio.h>
@@ -7,22 +7,45 @@
 #define MAX_LIMIT 20
 #define MAXCHAR 1000
 
+int compare_strings(char [], char []); 
+
+int compare_strings(char a[], char b[])
+{
+   int c = 0;
+ 
+   while (a[c] == b[c]) {
+      if (a[c] == '\0' || b[c] == '\0')
+         break;
+      c++;
+   }
+   
+   if (a[c] == '\0' && b[c] == '\0')
+      return 0;
+   else
+      return -1;
+}
+
+
 int main()
 {
-   char var;
+   char* var[];
    char st[MAX_LIMIT];
    char cmd[100];
-   char compar[] = "cd"; //This is the string that we will that we will compare later.   
+   char compar[20] = "cd" ; //This is the string that we will that we will compare later.   
+   char comparls[20];
+   char* comparpwd[20];
    char rf[MAXCHAR];
    char ch;
    int result;
+   int results;
    FILE *fp;
-   
-   fp = fopen("place.txt", "rb");//open place.txt
+   printf("Checking place.txt for a checkpoint."); 
+   fp = fopen("place.txt", "r+");//open place.txt
    while ((var=fgetc(fp)) != EOF)
    printf("%c", var);
+   comparpwd = "pwd";
    fprintf(fp,"pwd\n");//write
-    
+   
    if(fp == NULL)
    {
       printf("Error! Could not create a text file. Please report this error on GitHub");   
