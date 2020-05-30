@@ -45,6 +45,8 @@ sudo yum install git
 ```
 In MacOSX:
 ```
+xcode-select --install
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 brew install git
 ```
 To uninstall:
