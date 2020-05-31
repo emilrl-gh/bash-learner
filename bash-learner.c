@@ -25,7 +25,7 @@ int main()
    
    fp = fopen(filename, "r+");
    if (fp == NULL){
-       printf("Could not open file %s, rerun this code and place.txt is created.",filename);
+       printf("Could not open file %s, rerun this code and place.txt is created. If this problem persists please report it as an issue on Github.\n ",filename);
        exit(EXIT_FAILURE);
    }
    while (fgets(str, MAXCHAR, fp) != NULL)
