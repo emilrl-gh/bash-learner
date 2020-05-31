@@ -76,7 +76,7 @@ int main()
                         system(cmd);//run command from user input
             }
             else {
-                printf("Wrong retry.")
+                printf("Wrong retry.");
             }
 
 
@@ -120,7 +120,7 @@ int main()
                         system(cmd);//run command from user input
             }
             else {
-                printf("Wrong retry.")
+                printf("Wrong retry.");
             }
 
 
@@ -150,7 +150,7 @@ int main()
                    system(cmd);//run command from user input
        }
        else {
-           printf("Wrong retry.")
+           printf("Wrong retry.");
        }
 
 
@@ -207,7 +207,7 @@ int main()
                     system(cmd);//run command from user input
 		}
         else {
-            printf("Wrong retry.")
+            printf("Wrong retry.");
         }
 
 		
