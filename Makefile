@@ -11,8 +11,6 @@ ifeq ($(detected_OS),Linux)
 		gcc -o bash-learner bash-learner.c
 		sudo cp bash-learner /bin
 endif
-output : bash-learner.c        
-	gcc -o output/bash-learner1 bash-learner.c
 uninstall : bash-learner
 ifeq ($(detected_OS),Darwin)
 		@echo $(detected_OS)
