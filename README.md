@@ -53,3 +53,5 @@ To uninstall:
 ```
 make uninstall
 ```
+
+If you have an error please report it in issues.
