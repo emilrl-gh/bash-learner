@@ -1,5 +1,7 @@
-/* Author: K0stad1n */
-/* This program will guide you through learning the command line interface (CLI) mainly the bash shell */
+/*
+   Author: K0stad1n
+   This program will guide you through learning the command line interface (CLI) mainly the bash shell
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,19 +11,16 @@
 
 int main()
 {
-   char st[MAX_LIMIT];
-   char cmd[100];
+   char st[MAX_LIMIT];//This string is used for
+   char cmd[100]; //This string is used to run actual commands in the shell.
    char compar[20] = "cd" ; //This is the string that we will that we will compare later.
-   char rf[MAXCHAR];
-   char ch;
-   int result;
-   char str[MAXCHAR];
-   char* filename = "place.txt";
-   const char* findpwd = "pwd";
-   const char* findcd = "cd";
-   const char* findls = "ls";
-   filename = "place.txt";
-   FILE *fp;
+   int result; //this interger is used as the output of comparing two strings.
+   char str[MAXCHAR]; //str is used as a string to store the checkpoints read in place.txt
+   char* filename = "place.txt"; // file for storing checkpointa
+   const char* findpwd = "pwd"; /*                                                     */
+   const char* findcd = "cd";  /*   These strings are for comparing with checkpoints  */
+   const char* findls = "ls"; /*                                                     */
+   FILE *fp; //This var is for opening place.txt
    
    fp = fopen(filename, "r+");
    if (fp == NULL){
@@ -34,18 +33,14 @@ int main()
    if (strcmp (str, findpwd) == 10) {
        printf("Found checkpoint !\n");
        printf("In the shell you can move between 'folders' called directories the first command you will learn is pwd it shows in which directory or folder you are in. you can name directories whatever you want. Try it write pwd! \n ");
-       if (strcmp (str, findcd) == 10) {
-           
-}
-
        fgets(st, MAX_LIMIT, stdin);
        result = strcmp(st,"pwd");
        if(result == 10)
        {
             sprintf(cmd, "%s\n", st);
-        system(cmd);
-        fprintf(fp,"cd\n");
-        printf("Good Job you just learned your first command!\n");
+            system(cmd);
+            fprintf(fp,"cd\n");
+            printf("Good Job you just learned your first command!\n");
             printf("Now that you've learned how to see in what directory you now need to know how to move from one directory to another. For that you need to know the command cd which stands for Change Directory and add the name of the directory. It should look like this: cd nameofdirectory. Try it!: \n");
             fgets(st, MAX_LIMIT, stdin);
             if (strstr(st, compar) == NULL)
@@ -54,33 +49,30 @@ int main()
             }
             else
             {
-            fprintf(fp,"ls\n");
-            sprintf(cmd, "%s\n", st);
+                fprintf(fp,"ls\n");
+                sprintf(cmd, "%s\n", st);
                 system(cmd);
                 printf("Good Job you just learned how to move from another directory to another. To move out of a directory you use this specific command: cd .. \n");
-            printf("Now you may think : Basher how do I see the possible directories in which I can go in ? \n ");
-            printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . while not be shown Try it! :\n ");
-            fgets(st,MAX_LIMIT, stdin);
-            result = strcmp(st,"ls");
+                printf("Now you may think : Basher how do I see the possible directories in which I can go in ? \n ");
+                printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . while not be shown Try it! :\n ");
+                fgets(st,MAX_LIMIT, stdin);
+                result = strcmp(st,"ls");
                 if (result == 10)
                 {
-            sprintf(cmd, "%s\n", st);
+                    sprintf(cmd, "%s\n", st);
                     system(cmd);
-                printf("\n Good Job ! You know how look at the directories! \n");
-            printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with . ");
-            fgets(st,MAX_LIMIT, stdin);
+                    printf("\n Good Job ! You know how look at the directories! \n");
+                    printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with . ");
+                    fgets(st,MAX_LIMIT, stdin);
                     result = strcmp(st,"ls -a");
             if (result == 10)
             {
-                        sprintf(cmd, "%s\n", st);
-                        system(cmd);//run command from user input
+                sprintf(cmd, "%s\n", st);
+                system(cmd);//run command from user input
             }
             else {
                 printf("Wrong retry.");
             }
-
-
-            
             }
             }
        }
@@ -89,7 +81,7 @@ int main()
    //Start of cd checkpoint
    else if (strcmp (str, findcd) == 10)
    {
-       printf("Found cd checkpoint! \n");
+            printf("Found cd checkpoint! \n");
             printf("Now that you've learned how to see in what directory you now need to know how to move from one directory to another. For that you need to know the command cd which stands for Change Directory and add the name of the directory. It should look like this: cd nameofdirectory. Try it!: \n");
             fgets(st, MAX_LIMIT, stdin);
             if (strstr(st, compar) == NULL)
@@ -100,19 +92,19 @@ int main()
             {
             fprintf(fp,"ls\n");
             sprintf(cmd, "%s\n", st);
-                system(cmd);
-                printf("Good Job you just learned how to move from another directory to another. To move out of a directory you use this specific command: cd .. \n");
+            system(cmd);
+            printf("Good Job you just learned how to move from another directory to another. To move out of a directory you use this specific command: cd .. \n");
             printf("Now you may think : Basher how do I see the possible directories in which I can go in ? \n ");
             printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . while not be shown Try it! :\n ");
             fgets(st,MAX_LIMIT, stdin);
             result = strcmp(st,"ls");
                 if (result == 10)
                 {
-            sprintf(cmd, "%s\n", st);
+                    sprintf(cmd, "%s\n", st);
                     system(cmd);
-                printf("\n Good Job ! You know how look at the directories! \n");
-            printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with . ");
-            fgets(st,MAX_LIMIT, stdin);
+                    printf("\n Good Job ! You know how look at the directories! \n");
+                    printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with . ");
+                    fgets(st,MAX_LIMIT, stdin);
                     result = strcmp(st,"ls -a");
             if (result == 10)
             {
@@ -122,9 +114,6 @@ int main()
             else {
                 printf("Wrong retry.");
             }
-
-
-            
             }
             }
        return 0;
@@ -138,11 +127,11 @@ int main()
        result = strcmp(st,"ls");
            if (result == 10)
            {
-       sprintf(cmd, "%s\n", st);
+               sprintf(cmd, "%s\n", st);
                system(cmd);
-           printf("\n Good Job ! You know how look at the directories! \n");
-       printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with . ");
-       fgets(st,MAX_LIMIT, stdin);
+               printf("\n Good Job ! You know how look at the directories! \n");
+               printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with . ");
+               fgets(st,MAX_LIMIT, stdin);
                result = strcmp(st,"ls -a");
        if (result == 10)
        {
@@ -152,9 +141,6 @@ int main()
        else {
            printf("Wrong retry.");
        }
-
-
-       
        }
    }//end of ls checkpoint
    fprintf(fp,"pwd\n");//write
@@ -174,9 +160,9 @@ int main()
    if(result == 10)
    {
         sprintf(cmd, "%s\n", st);
-	system(cmd);
-	fprintf(fp,"cd\n");
-	printf("Good Job you just learned your first command!\n");
+        system(cmd);
+        fprintf(fp,"cd\n");
+        printf("Good Job you just learned your first command!\n");
         printf("Now that you've learned how to see in what directory you now need to know how to move from one directory to another. For that you need to know the command cd which stands for Change Directory and add the name of the directory. It should look like this: cd nameofdirectory. Try it!: \n");
         fgets(st, MAX_LIMIT, stdin);
         if (strstr(st, compar) == NULL)
@@ -185,22 +171,21 @@ int main()
         }
         else
         {
-	    fprintf(fp,"ls\n");
-	    sprintf(cmd, "%s\n", st);
+            fprintf(fp,"ls\n");
+            sprintf(cmd, "%s\n", st);
             system(cmd);
             printf("Good Job you just learned how to move from another directory to another. To move out of a directory you use this specific command: cd .. \n");
-	    printf("Now you may think : Basher how do I see the possible directories in which I can go in ? \n ");
-	    printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . while not be shown Try it! :\n ");
-	    fgets(st,MAX_LIMIT, stdin);
-	    result = strcmp(st,"ls");
-            if (result == 10)
-            {
-		sprintf(cmd, "%s\n", st);
+            printf("Now you may think : Basher how do I see the possible directories in which I can go in ? \n ");
+            printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . while not be shown Try it! :\n ");
+            fgets(st,MAX_LIMIT, stdin);
+            result = strcmp(st,"ls");
+        if (result == 10){
+                sprintf(cmd, "%s\n", st);
                 system(cmd);
-	    	printf("\n Good Job ! You know how look at the directories! \n");
-		printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with . ");
-		fgets(st,MAX_LIMIT, stdin);
-        result = strcmp(st,"ls -a");
+                printf("\n Good Job ! You know how look at the directories! \n");
+                printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with . ");
+                fgets(st,MAX_LIMIT, stdin);
+                result = strcmp(st,"ls -a");
 		if (result == 10)
 		{ 
                     sprintf(cmd, "%s\n", st);
@@ -209,13 +194,8 @@ int main()
         else {
             printf("Wrong retry.");
         }
-
-		
 	    }
         }
-
    }
-
    return 0;
 }
-
