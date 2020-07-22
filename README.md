@@ -7,7 +7,7 @@ This c program teaches you how to use the bash command line interface. I recomme
 Clone the repository by writing this in the console
 
 ```
-git clone https://github.com/RazerSAISO/bash_learner.git
+git clone https://github.com/K0stad1n/bash_learner.git
 ```
 then compile the code:
 
