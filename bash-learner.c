@@ -24,12 +24,13 @@ int main()
    
    fp = fopen(filename, "r+");
    if (fp == NULL){
-       printf("Could not open file %s, rerun this code and place.txt is created. If this problem persists please report it as an issue on Github.\n ",filename);
+       printf("Could not open file %s, rerun this code and place.txt was just created. If this problem persists please report it as an issue on Github.\n ",filename);
+       system("touch place.txt");
        exit(EXIT_FAILURE);
    }
    while (fgets(str, MAXCHAR, fp) != NULL)
        printf("%s", str);
-  //here starts pwd checkpoint
+    //here starts pwd checkpoint
    if (strcmp (str, findpwd) == 10) {
        printf("Found checkpoint !\n");
        printf("In the shell you can move between 'folders' called directories the first command you will learn is pwd it shows in which directory or folder you are in. you can name directories whatever you want. Try it write pwd! \n ");
