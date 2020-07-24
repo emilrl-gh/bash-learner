@@ -47,5 +47,10 @@ To uninstall:
 ```
 make uninstall
 ```
+To update:
+```
+make update
+```
+
 
 If you have an error please report it in issues.
