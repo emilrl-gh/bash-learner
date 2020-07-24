@@ -20,7 +20,7 @@ int main()
    const char* findpwd = "pwd"; /*                                                     */
    const char* findcd = "cd";  /*   These strings are for comparing with checkpoints  */
    const char* findls = "ls"; /*                                                     */
-   const char* checkforupdate = "sh check.sh";
+   const char* checkforupdate = "sh checkforupdate.sh";
    FILE *fp; //This var is for opening place.txt
    system(checkforupdate);
    fp = fopen(filename, "r+");
@@ -170,6 +170,7 @@ int main()
                     if (result == 10){
                         printf("Good Job! You know how to use the man command !");
                         printf("You need to know how to read files from the command line (coming soon).");
+                        return 0;
                     }
                     else
                     {
