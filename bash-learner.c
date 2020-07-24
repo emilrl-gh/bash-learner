@@ -22,7 +22,7 @@ int main()
    const char* findls = "ls"; /*                                                     */
    const char* checkforupdate = "sh checkforupdate.sh";
    FILE *fp; //This var is for opening place.txt
-   system(checkforupdate);
+   // system(checkforupdate);
    fp = fopen(filename, "r+");
    if (fp == NULL){
        printf("Could not open file %s, rerun this code and place.txt was just created. If this problem persists please report it as an issue on Github.\n ",filename);
@@ -77,7 +77,7 @@ int main()
                     result = strcmp(st,"man ls");
                     if (result == 10){
                         printf("Good Job! You know how to use the man command !");
-                        printf("You need to know how to read files from the command line (coming soon).");
+                        printf("You need to know how to read files from the command line (coming soon). \n");
                     }
                     else
                     {
@@ -130,7 +130,7 @@ int main()
                         result = strcmp(st,"man ls");
                         if (result == 10){
                             printf("Good Job! You know how to use the man command !");
-                            printf("You need to know how to read files from the command line (coming soon).");
+                            printf("You need to know how to read files from the command line (coming soon). \n");
                         }
                         else
                         {
@@ -146,7 +146,7 @@ int main()
    } //end of cd checkpoint
    else if (strcmp (str, findls) == 10)
    {
-       printf("Found ls checkpoint !");
+       printf("Found ls checkpoint !\n");
        printf("Now you may think : Basher how do I see the possible directories in which I can go in ? \n ");
        printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . while not be shown Try it! :\n ");
        fgets(st,MAX_LIMIT, stdin);
@@ -169,18 +169,22 @@ int main()
                     result = strcmp(st,"man ls");
                     if (result == 10){
                         printf("Good Job! You know how to use the man command !");
-                        printf("You need to know how to read files from the command line (coming soon).");
-                        return 0;
+                        printf("You need to know how to read files from the command line (coming soon). \n");
+                        exit(0);
                     }
                     else
                     {
                         printf("Wrong command try again !");
+                        exit(0);
                     }
        }
        else {
            printf("Wrong retry.");
+           exit(0);
        }
+       exit(0);
        }
+       return 0;
    }//end of ls checkpoint
    fprintf(fp,"pwd\n");//write
    
@@ -235,7 +239,8 @@ int main()
                     result = strcmp(st,"man ls");
                     if (result == 10){
                         printf("Good Job! You know how to use the man command !");
-                        printf("You need to know how to read files from the command line (coming soon).");
+                        printf("You need to know how to read files from the command line (coming soon).\n");
+                    
                     }
                     else
                     {

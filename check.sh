@@ -11,7 +11,6 @@ if [ $LOCAL = $REMOTE ]; then
     echo "${BIGReen}Bash-learner is up-to-date"
 elif [ $LOCAL = $BASE ]; then
     echo "${BIRed}Need to update using the command: make update. Please type Control + C to stop and run the command.${NC}"
-    exit
 else
     echo ""
 fi
