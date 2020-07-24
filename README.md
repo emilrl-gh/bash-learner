@@ -19,7 +19,8 @@ To run the program:
 ```
 bash-learner
 ```
-if there git is not installed install it:
+if git is not installed install it:
+
 In debian based system:
 ```
 sudo apt install update
