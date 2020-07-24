@@ -80,7 +80,7 @@ int main()
                     }
                     else
                     {
-                        printf('Wrong command try again !');
+                        printf("Wrong command try again !");
                     }
             }
             else {
@@ -133,7 +133,7 @@ int main()
                         }
                         else
                         {
-                            printf('Wrong command try again !');
+                            printf("Wrong command try again !");
                         }
             }
             else {
@@ -172,7 +172,7 @@ int main()
                     }
                     else
                     {
-                        printf('Wrong command try again !');
+                        printf("Wrong command try again !");
                     }
        }
        else {
@@ -237,7 +237,7 @@ int main()
                     }
                     else
                     {
-                        printf('Wrong command try again !');
+                        printf("Wrong command try again !");
                     }
                     
 
