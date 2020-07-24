@@ -7,7 +7,7 @@ This c program teaches you how to use the bash command line interface. I recomme
 Clone the repository by writing this in the console
 
 ```
-git clone https://github.com/RazerSAISO/bash_learner.git
+git clone https://github.com/K0stad1n/bash_learner.git
 ```
 then compile the code:
 
@@ -15,11 +15,7 @@ then compile the code:
 cd bash_learner
 make
 ```
-If you are in linux to run just write:
-```
-bash-learner
-```
-If you are on MacOS to run use:
+To run the program:
 ```
 bash-learner
 ```
@@ -46,8 +42,6 @@ sudo yum install git
 In MacOSX:
 ```
 xcode-select --install
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-brew install git
 ```
 To uninstall:
 ```
