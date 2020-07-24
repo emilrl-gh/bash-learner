@@ -19,7 +19,7 @@ To run the program:
 ```
 bash-learner
 ```
-if git is not installed install it:
+If git is not installed install it:
 
 In debian based system:
 ```
