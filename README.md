@@ -2,7 +2,7 @@
 
 ![C/C++ CI](https://github.com/K0stad1n/bash_learner/workflows/C/C++%20CI/badge.svg)
 
-This c program teaches you how to use the bash command line interface. I recommend to use a linux distro or macos.
+This C program teaches you how to use the bash command line interface. I recommend to use a linux distro or macos.
 
 Clone the repository by writing this in the console
 
@@ -39,7 +39,7 @@ or
 ```
 sudo yum install git
 ```
-In MacOSX:
+In macos:
 ```
 xcode-select --install
 ```
