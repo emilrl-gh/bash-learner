@@ -20,8 +20,9 @@ int main()
    const char* findpwd = "pwd"; /*                                                     */
    const char* findcd = "cd";  /*   These strings are for comparing with checkpoints  */
    const char* findls = "ls"; /*                                                     */
+   const char* checkforupdate = "sh check.sh";
    FILE *fp; //This var is for opening place.txt
-   
+   system(checkforupdate);
    fp = fopen(filename, "r+");
    if (fp == NULL){
        printf("Could not open file %s, rerun this code and place.txt was just created. If this problem persists please report it as an issue on Github.\n ",filename);
@@ -250,3 +251,4 @@ int main()
    }
    return 0;
 }
+
