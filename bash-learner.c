@@ -70,6 +70,18 @@ int main()
             {
                 sprintf(cmd, "%s\n", st);
                 system(cmd);//run command from user input
+                    printf("Another parameter is -h which almost always stands for help. It will show you all the parameters for the command. \n");
+                    printf("You have to know that not all commands have a -h parameters in this case you should use the man command with the name of the command for example : man ls or man cd. Try it! (type man ls then to quit tap q.)\n");
+                    fgets(st,MAX_LIMIT, stdin);
+                    result = strcmp(st,"man ls");
+                    if (result == 10){
+                        printf("Good Job! You know how to use the man command !");
+                        printf("You need to know how to read files from the command line (coming soon).");
+                    }
+                    else
+                    {
+                        printf('Wrong command try again !');
+                    }
             }
             else {
                 printf("Wrong retry.");
@@ -111,6 +123,18 @@ int main()
             {
                         sprintf(cmd, "%s\n", st);
                         system(cmd);//run command from user input
+                        printf("Another parameter is -h which almost always stands for help. It will show you all the parameters for the command. \n");
+                        printf("You have to know that not all commands have a -h parameters in this case you should use the man command with the name of the command for example : man ls or man cd. Try it! (type man ls then to quit tap q.)\n");
+                        fgets(st,MAX_LIMIT, stdin);
+                        result = strcmp(st,"man ls");
+                        if (result == 10){
+                            printf("Good Job! You know how to use the man command !");
+                            printf("You need to know how to read files from the command line (coming soon).");
+                        }
+                        else
+                        {
+                            printf('Wrong command try again !');
+                        }
             }
             else {
                 printf("Wrong retry.");
@@ -138,6 +162,18 @@ int main()
        {
                    sprintf(cmd, "%s\n", st);
                    system(cmd);//run command from user input
+                    printf("Another parameter is -h which almost always stands for help. It will show you all the parameters for the command. \n");
+                    printf("You have to know that not all commands have a -h parameters in this case you should use the man command with the name of the command for example : man ls or man cd. Try it! (type man ls then to quit tap q.)\n");
+                    fgets(st,MAX_LIMIT, stdin);
+                    result = strcmp(st,"man ls");
+                    if (result == 10){
+                        printf("Good Job! You know how to use the man command !");
+                        printf("You need to know how to read files from the command line (coming soon).");
+                    }
+                    else
+                    {
+                        printf('Wrong command try again !');
+                    }
        }
        else {
            printf("Wrong retry.");
@@ -184,13 +220,27 @@ int main()
                 sprintf(cmd, "%s\n", st);
                 system(cmd);
                 printf("\n Good Job ! You know how look at the directories! \n");
-                printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with . ");
+                printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with.");
                 fgets(st,MAX_LIMIT, stdin);
                 result = strcmp(st,"ls -a");
 		if (result == 10)
 		{ 
                     sprintf(cmd, "%s\n", st);
                     system(cmd);//run command from user input
+                    printf("Another parameter is -h which almost always stands for help. It will show you all the parameters for the command. \n");
+                    printf("You have to know that not all commands have a -h parameters in this case you should use the man command with the name of the command for example : man ls or man cd. Try it! (type man ls then to quit tap q.)\n");
+                    fgets(st,MAX_LIMIT, stdin);
+                    result = strcmp(st,"man ls");
+                    if (result == 10){
+                        printf("Good Job! You know how to use the man command !");
+                        printf("You need to know how to read files from the command line (coming soon).");
+                    }
+                    else
+                    {
+                        printf('Wrong command try again !');
+                    }
+                    
+
 		}
         else {
             printf("Wrong retry.");
