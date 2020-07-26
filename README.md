@@ -4,8 +4,7 @@
 
 This C program teaches you how to use the bash command line interface. I recommend to use a linux distro or macos.
 
-Clone the repository by writing this in the console
-
+Clone the repository by copying this in the console or in the terminal:
 ```
 git clone https://github.com/K0stad1n/bash-learner.git
 ```
