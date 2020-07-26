@@ -9,6 +9,13 @@
 #define MAX_LIMIT 20
 #define MAXCHAR 1000
 
+
+void red () {
+  printf("\033[1;31m");
+}
+void reset () {
+  printf("\033[0m");
+}
 int main()
 {
    char st[MAX_LIMIT];//This string is used for
@@ -22,7 +29,7 @@ int main()
    const char* findls = "ls"; /*                                                     */
    const char* checkforupdate = "sh checkforupdate.sh";
    FILE *fp; //This var is for opening place.txt
-   // system(checkforupdate);
+   system(checkforupdate);
    fp = fopen(filename, "r+");
    if (fp == NULL){
        printf("Could not open file %s, rerun this code and place.txt was just created. If this problem persists please report it as an issue on Github.\n ",filename);
@@ -30,7 +37,7 @@ int main()
        exit(EXIT_FAILURE);
    }
    while (fgets(str, MAXCHAR, fp) != NULL)
-       printf("%s", str);
+       printf("");
     //here starts pwd checkpoint
    if (strcmp (str, findpwd) == 10) {
        printf("Found checkpoint !\n");
@@ -51,12 +58,12 @@ int main()
             }
             else
             {
-                fprintf(fp,"ls\n");
+                fprintf(fp,"ls");
                 sprintf(cmd, "%s\n", st);
                 system(cmd);
                 printf("Good Job you just learned how to move from another directory to another. To move out of a directory you use this specific command: cd .. \n");
                 printf("Now you may think : Basher how do I see the possible directories in which I can go in ? \n ");
-                printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . while not be shown Try it! :\n ");
+                printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . will not be shown Try it! :\n ");
                 fgets(st,MAX_LIMIT, stdin);
                 result = strcmp(st,"ls");
                 if (result == 10)
@@ -76,6 +83,8 @@ int main()
                     fgets(st,MAX_LIMIT, stdin);
                     result = strcmp(st,"man ls");
                     if (result == 10){
+                        sprintf(cmd, "%s\n", st);
+                        system(cmd);
                         printf("Good Job! You know how to use the man command !");
                         printf("You need to know how to read files from the command line (coming soon). \n");
                     }
@@ -109,7 +118,7 @@ int main()
             system(cmd);
             printf("Good Job you just learned how to move from another directory to another. To move out of a directory you use this specific command: cd .. \n");
             printf("Now you may think : Basher how do I see the possible directories in which I can go in ? \n ");
-            printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . while not be shown Try it! :\n ");
+            printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . will not be shown Try it! :\n ");
             fgets(st,MAX_LIMIT, stdin);
             result = strcmp(st,"ls");
                 if (result == 10)
@@ -129,6 +138,8 @@ int main()
                         fgets(st,MAX_LIMIT, stdin);
                         result = strcmp(st,"man ls");
                         if (result == 10){
+                            sprintf(cmd, "%s\n", st);
+                            system(cmd);
                             printf("Good Job! You know how to use the man command !");
                             printf("You need to know how to read files from the command line (coming soon). \n");
                         }
@@ -148,7 +159,7 @@ int main()
    {
        printf("Found ls checkpoint !\n");
        printf("Now you may think : Basher how do I see the possible directories in which I can go in ? \n ");
-       printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . while not be shown Try it! :\n ");
+       printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . will not be shown Try it! :\n ");
        fgets(st,MAX_LIMIT, stdin);
        result = strcmp(st,"ls");
            if (result == 10)
@@ -168,6 +179,8 @@ int main()
                     fgets(st,MAX_LIMIT, stdin);
                     result = strcmp(st,"man ls");
                     if (result == 10){
+                        sprintf(cmd, "%s\n", st);
+                        system(cmd);
                         printf("Good Job! You know how to use the man command !");
                         printf("You need to know how to read files from the command line (coming soon). \n");
                         exit(0);
@@ -219,14 +232,14 @@ int main()
             system(cmd);
             printf("Good Job you just learned how to move from another directory to another. To move out of a directory you use this specific command: cd .. \n");
             printf("Now you may think : Basher how do I see the possible directories in which I can go in ? \n ");
-            printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . while not be shown Try it! :\n ");
+            printf("It's good you thought of that to look at the directories you can go in, you need the following command: ls. It stands for list. Directories that start with . will not be shown Try it! :\n ");
             fgets(st,MAX_LIMIT, stdin);
             result = strcmp(st,"ls");
         if (result == 10){
                 sprintf(cmd, "%s\n", st);
                 system(cmd);
                 printf("\n Good Job ! You know how look at the directories! \n");
-                printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with.");
+                printf("\n Something I did not tell you is that almost each command has what is called a 'parameter' by that I mean an 'argument' you can add a parameter so you can see what you really want to see for example in the ls command you can add -a to see every directories even the ones that start with.\n");
                 fgets(st,MAX_LIMIT, stdin);
                 result = strcmp(st,"ls -a");
 		if (result == 10)
@@ -238,6 +251,8 @@ int main()
                     fgets(st,MAX_LIMIT, stdin);
                     result = strcmp(st,"man ls");
                     if (result == 10){
+                        sprintf(cmd, "%s\n", st);
+                        system(cmd);
                         printf("Good Job! You know how to use the man command !");
                         printf("You need to know how to read files from the command line (coming soon).\n");
                     
