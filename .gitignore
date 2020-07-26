@@ -3,3 +3,4 @@ test.c
 place.txt
 *.swp
 .DS_Store
+.vscode
