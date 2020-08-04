@@ -7,11 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: K0stad1n/bash-learner@master
+        uses: actions/checkout@v1
       - name: Build
         run: make workflows
       - name: Release
-        uses: K0stad1n/bash-learner@v0.1-beta
+        uses: actions/checkout@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: bash-learner
