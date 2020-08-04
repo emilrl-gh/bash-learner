@@ -37,7 +37,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: make
-      run: make workflows
+      run: gcc bash-learner.c -o bash-learner
     - name: ls
       run: ls 
     
