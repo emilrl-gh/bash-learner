@@ -15,7 +15,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: bash-learner
-        asset_name: bash-learnermacosx
-        tag: ${{ github.ref }}
+        asset_name: bash-learner-linux
+        tag: v1.0.0
         overwrite: true
-        body: "This is the binary for macosx"
+        body: "This is the binary for linux"
