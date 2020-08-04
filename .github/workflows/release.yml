@@ -18,7 +18,7 @@ jobs:
         asset_name: bash-learner-linux
         tag: v1.0.1
         overwrite: true
-        body: "This is the binary for linux"
+        body: "This is the binaries for linux, macOS and Windows"
   
   build-macos:
 
@@ -39,7 +39,7 @@ jobs:
         asset_name: bash-learner-macos
         tag: v1.0.1
         overwrite: true
-        body: "This is the binary for macos"
+        body: "This is the binaries for linux, macOS and Windows"
   
   build-windows:
     
@@ -60,4 +60,4 @@ jobs:
         asset_name: bash-learner-windows
         tag: v1.0.1
         overwrite: true
-        body: "This is the binary for windows"
+        body: "This is the binaries for linux, macOS and Windows"
