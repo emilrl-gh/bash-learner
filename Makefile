@@ -3,9 +3,7 @@ compile : bash-learner.c
 ifeq ($(detected_OS),Darwin)
 			@echo $(detected_OS)
 			gcc -o bash-learner bash-learner.c
-			sudo mount -uw /
-			sudo cp bash-learner /usr/bin
-			bash-learner
+			./bash-learner
 endif   
 ifeq ($(detected_OS),Linux)
 			@echo $(detected_OS)
@@ -15,8 +13,7 @@ endif
 uninstall : bash-learner
 ifeq ($(detected_OS),Darwin)
 		@echo $(detected_OS)
-		sudo mount -uw /
-		sudo rm /usr/bin/bash-learner
+		sudo rm bash-learner
 endif
 ifeq ($(detected_OS),Linux)
 		@echo $(detected_OS)
@@ -27,15 +24,11 @@ update : bash-learner
 	git pull
 ifeq ($(detected_OS),Darwin)
 		@echo $(detected_OS)
-		sudo mount -uw /
-		@echo "mounting /"
-		sudo rm /usr/bin/bash-learner
+		sudo rm bash-learner
 		@echo "removed old bin"
 		gcc -o bash-learner bash-learner.c
-		@echo "compiling"
-		sudo cp bash-learner /usr/bin
 		@echo "copying"
-		bash-learner
+		./bash-learner
 endif
 ifeq ($(detected_OS),Linux)
 		@echo $(detected_OS)
