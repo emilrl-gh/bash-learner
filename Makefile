@@ -36,4 +36,13 @@ ifeq ($(detected_OS),Linux)
 		gcc -o bash-learner bash-learner.c
 		sudo cp bash-learner /bin
 endif
-
+workflows : bash-learner.c
+ifeq ($(detected_OS),Darwin)
+			@echo $(detected_OS)
+			gcc -o bash-learner bash-learner.c
+endif   
+ifeq ($(detected_OS),Linux)
+			@echo $(detected_OS)
+			gcc -o bash-learner bash-learner.c
+			sudo cp bash-learner /bin
+endif
