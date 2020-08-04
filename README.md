@@ -1,13 +1,23 @@
 # bash-learner
 
 ![C/C++ CI](https://github.com/K0stad1n/bash_learner/workflows/C/C++%20CI/badge.svg)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/K0stad1n/bash-learner?include_prereleases)
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
+[![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Naereen/badges/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-This C program teaches you how to use the bash command line interface. I recommend to use a linux distro or macos.
-If you want you can download an executable at this link:
+This C program teaches you how to use the bash command line interface.
 
-https://github.com/K0stad1n/bash-learner/releases/tag/v1.0.0
+This program supports:
+MacOS
+Windows
+Linux
 
-Or you can compile for you're own machine:
+If you want you can download an executable at this link(if you are on Windows you have to download the .exe file from the link below):
+
+https://github.com/K0stad1n/bash-learner/releases/tag/v1.0.1
+
+Or you can compile for you're own machine (MacOS and Linux only does not support Windows):
 
 Clone the repository by copying this in the console or in the terminal:
 ```
