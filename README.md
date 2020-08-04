@@ -30,9 +30,16 @@ cd bash_learner
 make
 ```
 To run the program:
+In Linux:
 ```
 bash-learner
 ```
+
+In macOS:
+```
+./bash-learner
+```
+
 If git is not installed install it:
 
 In debian based system:
