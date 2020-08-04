@@ -3,7 +3,7 @@ name: Publish to Release
 on: push
 
 jobs:
-  build:
+  build-ubuntu:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,3 +19,24 @@ jobs:
         tag: v1.0.0
         overwrite: true
         body: "This is the binary for linux"
+  
+  build-macos:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest]
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: make workflows
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: bash-learner
+        asset_name: bash-learner-macos
+        tag: v1.0.0
+        overwrite: true
+        body: "This is the binary for macos" 
