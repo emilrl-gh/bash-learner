@@ -1,13 +1,9 @@
 name: Publish to Release
 
-on:
-  push:
-    tags:
-      - '*'
+on: push
 
 jobs:
   build:
-    name: Publish binaries
     runs-on: ubuntu-latest
 
     steps:
