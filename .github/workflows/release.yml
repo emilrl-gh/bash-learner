@@ -39,4 +39,25 @@ jobs:
         asset_name: bash-learner-macos
         tag: v1.0.1
         overwrite: true
-        body: "This is the binary for macos" 
+        body: "This is the binary for macos"
+  
+  build-windows:
+    
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-latest]
+        
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: gcc bash-learner.c -o bash-learner
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: bash-learner
+        asset_name: bash-learner-windows
+        tag: v1.0.1
+        overwrite: true
+        body: "This is the binary for windows"
