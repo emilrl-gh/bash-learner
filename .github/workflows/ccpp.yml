@@ -7,13 +7,23 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-    runs-on: 
-      strategy:
-       matrix:
-        platform: [ubuntu-latest, macos-latest]
-    runs-on: ${{ matrix.platform }]
+  build-ubuntu:
+
+    runs-on: ubuntu-latest
+    
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v1
+    - name: make
+      run: make
+
+  build-macos:
+
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos]
+    
+    steps:
+    - uses: actions/checkout@v1
     - name: make
       run: make
