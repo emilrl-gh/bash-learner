@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: K0stad1n/bash-learner@master
       - name: Build
         run: make workflows
       - name: Release
