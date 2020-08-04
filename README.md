@@ -3,6 +3,11 @@
 ![C/C++ CI](https://github.com/K0stad1n/bash_learner/workflows/C/C++%20CI/badge.svg)
 
 This C program teaches you how to use the bash command line interface. I recommend to use a linux distro or macos.
+If you want you can download an executable at this link:
+
+https://github.com/K0stad1n/bash-learner/releases/tag/v1.0.0
+
+Or you can compile for you're own machine:
 
 Clone the repository by copying this in the console or in the terminal:
 ```
@@ -51,6 +56,5 @@ To update:
 ```
 make update
 ```
-
 
 If you have an error please report it in issues.
