@@ -1,20 +1,25 @@
-  name: Publish to Release
+name: Publish to Release
 
-on: push
+on:
+  push:
+    tags:
+      - '*'
 
 jobs:
   build:
+    name: Publish binaries
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Build
-        run: make workflows
-      - name: Show dir
-        run: ls
-      - name: Release
-        uses: AButler/upload-release-assets@v2.0
-        with:
-          files: 'bash-learner'
-          release-tag: v0.1-beta
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - uses: actions/checkout@v2
+    - name: Build
+      run: make workflows
+    - name: Upload binaries to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: bash-learner
+        asset_name: bash-learnermacosx
+        tag: ${{ github.ref }}
+        overwrite: true
+        body: "This is the binary for macosx"
