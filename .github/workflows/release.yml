@@ -1,4 +1,4 @@
-name: Publish to Release
+  name: Publish to Release
 
 on: push
 
@@ -16,4 +16,5 @@ jobs:
         uses: AButler/upload-release-assets@v2.0
         with:
           files: 'bash-learner'
+          release-tag: v0.1-beta
           repo-token: ${{ secrets.GITHUB_TOKEN }}
