@@ -16,7 +16,7 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: bash-learner
         asset_name: bash-learner-linux
-        tag: v1.0.0
+        tag: v1.0.1
         overwrite: true
         body: "This is the binary for linux"
   
@@ -37,6 +37,6 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: bash-learner
         asset_name: bash-learner-macos
-        tag: v1.0.0
+        tag: v1.0.1
         overwrite: true
         body: "This is the binary for macos" 
