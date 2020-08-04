@@ -8,9 +8,11 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
+    runs-on: 
+      strategy:
+       matrix:
+        platform: [ubuntu-latest, macos-latest
+    runs-on: ${{ matrix.platform }]
     steps:
     - uses: actions/checkout@v2
     - name: make
