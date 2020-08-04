@@ -38,4 +38,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: make
       run: make workflows
+    - name: ls
+      run: ls 
     
