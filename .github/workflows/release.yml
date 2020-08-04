@@ -1,0 +1,19 @@
+name: Publish to Release
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: make workflows
+      - name: Release
+        uses: K0stad1n/bash-learner@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: bash-learner
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
