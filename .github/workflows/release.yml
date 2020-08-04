@@ -11,9 +11,7 @@ jobs:
       - name: Build
         run: make workflows
       - name: Release
-        uses: actions/checkout@v1
-        if: startsWith(github.ref, 'refs/tags/')
+        uses: AButler/upload-release-assets@v2.0
         with:
-          files: bash-learner
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          files: 'bash-learner'
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
