@@ -10,7 +10,8 @@ jobs:
         uses: actions/checkout@v1
       - name: Build
         run: make workflows
-             ls -a
+      - name: Show dir
+        run: ls
       - name: Release
         uses: AButler/upload-release-assets@v2.0
         with:
