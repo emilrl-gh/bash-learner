@@ -12,7 +12,7 @@
 
 int main()
 {
-   char st[MAX_LIMIT];//This string is used for
+   char st[MAX_LIMIT];//This string is used for getting user input
    char cmd[100]; //This string is used to run actual commands in the shell.
    char compare[20] = "cd" ; //This is the string that we will that we will compare later.
    int result; //this interger is used as the output of comparing two strings.
@@ -21,10 +21,12 @@ int main()
    const char* findpwd = "pwd"; /*                                                     */
    const char* findcd = "cd";  /*   These strings are for comparing with checkpoints  */
    const char* findls = "ls"; /*                                                     */
-   const char* checkforupdate = "sh checkforupdate.sh";
+   const char* checkforupdate = "sh checkforupdate.sh"; // check for updates using a shell script
    FILE *fp; //This var is for opening place.txt
+
    system(checkforupdate);
    fp = fopen(filename, "r+");
+
    if (fp == NULL){
        printf("Could not open file %s, rerun this code and place.txt was just created. If this problem persists please report it as an issue on Github.\n ",filename);
        system("touch place.txt");
@@ -216,15 +218,15 @@ int main()
        return 0;
    }//end of ls checkpoint
    fprintf(fp,"pwd\n");//write
-   
+
    if(fp == NULL)
    {
-      printf("Error! Could not create a text file. Please report this error on GitHub");   
-      exit(1);             
+      printf("Error! Could not create a text file. Please report this error on GitHub");
+      exit(1);
    }
    boldmagenta();
    printf("Hello and Welcome to bash learner,  What's you're name ?\n");
-   fgets(st, MAX_LIMIT, stdin); 
+   fgets(st, MAX_LIMIT, stdin);
    printf("Hi %s, I am you're bash teacher my name is Basher.", st);
    printf("In the shell you can move between 'folders' called directories the first command you will learn is pwd it shows in which directory or folder you are in. you can name directories whatever you want. Try it write pwd! \n ");
    red();
@@ -266,7 +268,7 @@ int main()
                 fgets(st,MAX_LIMIT, stdin);
                 result = strcmp(st,"ls -a");
 		if (result == 10)
-		{ 
+		{
                     sprintf(cmd, "%s\n", st);
                     system(cmd);//run command from user input
                     boldcyan();
@@ -280,22 +282,21 @@ int main()
                         system(cmd);
                         boldyellow();
                         printf("Good Job! You know how to use the man command ! \n");
-                        printf("You need to know how to read files from the command line (coming soon).\n");
+                        printf("You need to know how to create directories (coming soon, spoiler: mkdir).\n");
                         reset();
                     }
                     else
                     {
                         printf("Wrong command try again !");
                     }
-                    
 
-		}
+
+		    }
         else {
             printf("Wrong retry.");
         }
-	    }
+	      }
         }
    }
    return 0;
 }
-
