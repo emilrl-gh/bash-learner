@@ -15,7 +15,7 @@ Linux
 
 If you want you can download an executable at this link(if you are on Windows you have to download the .exe file from the link below):
 
-https://github.com/K0stad1n/bash-learner/releases/tag/v1.0.1
+https://github.com/K0stad1n/bash-learner/releases/tag/v1.1.0
 
 Or you can compile for you're own machine (MacOS and Linux only does not support Windows):
 
