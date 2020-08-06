@@ -3,7 +3,6 @@
    This program will guide you through learning the command line interface (CLI) mainly the bash shell
  */
 
-#include <err.h>
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
