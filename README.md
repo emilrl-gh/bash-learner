@@ -17,6 +17,14 @@ If you want you can download an executable at this link(if you are on Windows yo
 
 https://github.com/K0stad1n/bash-learner/releases/tag/v1.1.0
 
+If you are on Linux or MacOS after downloading please follow these instructions:
+
+- Open Terminal or the Console.(For MacOS users to open Terminal go to: Applications > Utilities > Terminal"
+- Type: cd Downloads (name of the folder where you downloaded the file)
+- Type on Linux: chmod +x bash-learner-linux 
+- Type on Macos: chmod +x bash-learner-macos
+- Then Type, to run: ./bash-learner-linux or ./bash-learner-macos
+
 Or you can compile for you're own machine (MacOS and Linux only does not support Windows):
 
 Clone the repository by copying this in the console or in the terminal:
