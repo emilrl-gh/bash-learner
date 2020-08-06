@@ -1,7 +1,8 @@
-test.c 
+test.c
 *.out
 place.txt
 *.swp
 .DS_Store
 .vscode
 gitautomation
+*.gch

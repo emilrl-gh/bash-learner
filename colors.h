@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define COLOR_RED     "\x1b[31m"
+#define COLOR_GREEN   "\x1b[32m"
+#define COLOR_YELLOW  "\x1b[33m"
+#define COLOR_BLUE    "\x1b[34m"
+#define COLOR_MAGENTA "\x1b[35m"
+#define COLOR_CYAN    "\x1b[36m"
+#define BRIGHT_BLACK  "\x1b[30;1m"
+#define BRIGHT_RED    "\x1b[31;1m"
+#define BRIGHT_GREEN  "\x1b[32;1m"
+#define BRIGHT_YELLOW "\x1b[33;1m"
+#define BRIGHT_BLUE   "\x1b[34;1m"
+#define BRIGHT_MAGENTA "\x1b[35;1m"
+#define BRIGHT_CYAN    "\x1b[36;1m"
+#define BRIGHT_WHITE   "\x1b[37;1m"
+#define BACKGROUND_BLACK "\x1b[40m"
+#define FONT_BOLD "\x1b[1m"
+#define FONT_UNDERLINE "\x1b[4m"
+#define ANSI_RESET   "\x1b[0m"
