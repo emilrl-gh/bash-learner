@@ -23,14 +23,23 @@ int main()
    const char* findls = "ls"; /*                                                     */
    const char* checkforupdate = "sh checkforupdate.sh"; // check for updates using a shell script
    FILE *fp; //This var is for opening place.txt
-
    system(checkforupdate);
-   fp = fopen(filename, "r+");
-   readcheckpoint();
+   fp = fopen(filename, "rb");
+
    if (fp == NULL){
        fprintf(stderr, "%s: %s!\n", filename, strerror(errno));
-       system("touch place.txt");
+       fprintf(stdout, "%s%s%s [%sY%s/%sn%s]> ", FONT_BOLD COLOR_YELLOW, "Continue ? or stop so I can create file.", ANSI_RESET, BRIGHT_GREEN, ANSI_RESET, COLOR_RED, ANSI_RESET);
+       fgets(st, 200, stdin);
+       if (strcmp(st,"Y") == 10){
+         printf("Ok\n");
+       } else {
+         printf("%s%s%s", "Creating file please restart the program.",
+                    " By typing the command bash-learner when you are in",
+                    " linux, on mac type ./bash-learner, on windows rerun the .exe file.\n");
+        system("touch place.txt");
+       }
    }
+   readcheckpoint();
    while (fgets(str, 200, fp) != NULL)
        printf("");
    fprintf(fp,"pwd\n");//write
