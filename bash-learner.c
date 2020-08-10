@@ -49,7 +49,7 @@ int main()
       printf("Error! Could not create a text file. Please report this error on GitHub");
       exit(1);
    }
-   printf(FONT_BOLD BRIGHT_GREEN "Hello and Welcome to bash learner,  What's you're name ?\n");
+   printf(FONT_BOLD BRIGHT_GREEN "Hello and Welcome to bash learner,  What's your name ?\n");
    fgets(st, 200, stdin);
    printf("Hi %s I am you're bash teacher my name is Basher.", st);
    printf("%s\n%s\n", "In the shell, you can move between 'folders' called directories. "
