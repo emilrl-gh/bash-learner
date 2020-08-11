@@ -8,13 +8,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Creating build dir
+      run: mkdir build-linux
+    - name: Copying files
+      run: cp checkforupdate.sh build-linux/
+    - name: Creating file
+      run: touch build-linux/place.txt
     - name: Build
-      run: make workflows
+      run: gcc bash-learner.c -o build-linux/bash-learner
+    - name: Zipping 
+      run: zip -r bashlearner-ubuntu.zip build-linux
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: bash-learner
+        file:  bashlearner-ubuntu.zip
         asset_name: bash-learner-linux
         tag: v1.5.1
         overwrite: true
@@ -29,13 +37,21 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+    - name: Creating build dir
+      run: mkdir build-macos
+    - name: Copying files
+      run: cp checkforupdate.sh build-macos/
+    - name: Creating file
+      run: touch build-macos/place.txt
     - name: Build
-      run: make workflows
+      run: gcc bash-learner.c -o build-macos/bash-learner
+    - name: Zipping 
+      run: zip -r bashlearner-macos.zip build-macos
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: bash-learner
+        file: bashlearner-macos.zip
         asset_name: bash-learner-macos
         tag: v1.5.1
         overwrite: true
@@ -50,13 +66,21 @@ jobs:
         
     steps:
     - uses: actions/checkout@v2
+    - name: Creating build dir
+      run: mkdir build-windows
+    - name: Copying files
+      run: cp checkforupdate.sh build-windows/
+    - name: Creating file
+      run: touch build-windows/place.txt
     - name: Build
-      run: gcc bash-learner.c -o bash-learner
+      run: gcc bash-learner.c -o build-windows/bash-learner
+    - name: Zipping 
+      run: zip -r bash-learner-windows.zip build-windows
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
-        file: bash-learner.exe
+        file: bash-learner-windows.zip
         asset_name: bash-learner-windows
         tag: v1.5.1
         overwrite: true
