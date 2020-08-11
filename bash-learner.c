@@ -23,7 +23,6 @@ int main()
    const char* findls = "ls"; /*                                                     */
    const char* checkforupdate = "sh checkforupdate.sh"; // check for updates using a shell script
    FILE *fp; //This var is for opening place.txt
-   system(checkforupdate);
    fp = fopen(filename, "rb");
 
    if (fp == NULL){
@@ -39,6 +38,7 @@ int main()
         system("touch place.txt");
        }
    }
+   system(checkforupdate);
    readcheckpoint();
    while (fgets(str, 200, fp) != NULL)
        printf("");
