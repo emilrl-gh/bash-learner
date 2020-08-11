@@ -51,7 +51,7 @@ int main()
    }
    printf(FONT_BOLD BRIGHT_GREEN "Hello and Welcome to bash learner,  What's your name ?\n");
    fgets(st, 200, stdin);
-   printf("Hi %s I am you're bash teacher my name is Basher.", st);
+   printf("Hi %s I am your bash teacher my name is Basher.", st);
    printf("%s\n%s\n", "In the shell, you can move between 'folders' called directories. "
                " The first command you will learn is `pwd`, it shows which directory or folder you're in. ",
                " You can name directories whatever you want. Try it write pwd! \n " ANSI_RESET);
