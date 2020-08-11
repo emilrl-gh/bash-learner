@@ -38,7 +38,7 @@ int main()
         system("touch place.txt");
        }
    }
-   system(checkforupdate);
+   system("git pull");
    readcheckpoint();
    while (fgets(str, 200, fp) != NULL)
        printf("");
