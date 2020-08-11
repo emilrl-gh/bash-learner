@@ -23,7 +23,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file:  bashlearner-ubuntu.zip
-        asset_name: bash-learner-linux
+        asset_name: bash-learner-linux.zip
         tag: v1.5.2
         overwrite: true
         body: "This is the binaries for linux, macOS and Windows"
@@ -52,7 +52,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: bashlearner-macos.zip
-        asset_name: bash-learner-macos
+        asset_name: bash-learner-macos.zip
         tag: v1.5.2
         overwrite: true
         body: "This is the binaries for linux, macOS and Windows"
@@ -88,7 +88,7 @@ jobs:
       with:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: bash-learner-windows.zip
-        asset_name: bash-learner-windows
+        asset_name: bash-learner-windows.zip
         tag: v1.5.2
         overwrite: true
         body: "This is the binaries for linux, macOS and Windows"
