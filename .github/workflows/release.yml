@@ -78,7 +78,11 @@ jobs:
     - name: Build
       run: gcc bash-learner.c -o build-windows/bash-learner
     - name: Zipping 
-      run: zip -r bash-learner-windows.zip build-windows
+      uses: papeloto/action-zip@v1
+      with:
+        files: build-windows
+        recursive: false
+        dest: bash-learner-windows.zip
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
       with:
