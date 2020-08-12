@@ -167,7 +167,7 @@ void man_text(){
   }
 }
 
-int readcheckpoint(FILE *fp, filename) {
+int readcheckpoint(FILE *fp, char* filename) {
   char* findpwd = "pwd"; /*                                                     */
   char* findcd = "cd";  /*   These strings are for comparing with checkpoints  */
   char* findls = "ls"; /*                                                     */
