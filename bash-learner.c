@@ -61,6 +61,8 @@ int main()
    fprintf(fp,"ls\ncd\npwd\n"); // Write checkpoint
    ls_atext();
    man_text();
+   mkdir_text();
+   rmdir_text();
    fclose(fp);
    return 0;
 }

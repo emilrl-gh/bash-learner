@@ -167,6 +167,62 @@ void man_text(){
   }
 }
 
+void mkdir_text(){
+  char st[200];//This string is used for getting user input
+  char cmd[100]; //This string is used to run actual commands in the shell.
+  int result; //this interger is used as the output of comparing two strings.
+  int result2;
+  char str[200]; //str is used as a string to store the checkpoints read in place.txt
+  printf(FONT_BOLD COLOR_BLUE ,"%s", "To create a directory you need to know the command mkdir which stands for make directory. To create a directory you use mkdir and add the name of the directory. Try it! (Type mkdir test)" ANSI_RESET);
+  while(1){
+    fgets(st, 200, stdin);
+    result = strcmp(st, "mkdir test");
+    //result2 = strcmp(st, "mkdir test ");
+    if(result == 10 || result2 == 10){
+      sprintf(cmd, "%s\n", st);
+      system(cmd);
+      printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the mkdir directory ! \n");
+      break;
+    } else {
+      printf(FONT_BOLD COLOR_RED "Try again by typing mkdir test: " ANSI_RESET);
+      if(result == 10 || result2 == 10){
+        sprintf(cmd, "%s\n", st);
+        system(cmd);
+        printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the mkdir directory !  \n");
+        break;
+      }
+    }
+  }
+}
+
+void rmdir_text(){
+  char st[200];//This string is used for getting user input
+  char cmd[100]; //This string is used to run actual commands in the shell.
+  int result; //this interger is used as the output of comparing two strings.
+  int result2;
+  char str[200]; //str is used as a string to store the checkpoints read in place.txt
+  printf(FONT_BOLD COLOR_BLUE ,"%s", "To remove a directory you need to know the command rmdir which stands for remove directory. To remove a directory you use rmdir and add the name of the directory. Try it! (Type rmdir test)" ANSI_RESET);
+  while(1){
+    fgets(st, 200, stdin);
+    result = strcmp(st, "rmdir test");
+    //result2 = strcmp(st, "rmdir test ");
+    if(result == 10 || result2 == 10){
+      sprintf(cmd, "%s\n", st);
+      system(cmd);
+      printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the rmdir directory ! \n");
+      break;
+    } else {
+      printf(FONT_BOLD COLOR_RED "Try again by typing rmdir test: " ANSI_RESET);
+      if(result == 10 || result2 == 10){
+        sprintf(cmd, "%s\n", st);
+        system(cmd);
+        printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the rmdir directory !  \n");
+        break;
+      }
+    }
+  }
+}
+
 int readcheckpoint(FILE *fp, char* filename) {
   char* findpwd = "pwd"; /*                                                     */
   char* findcd = "cd";  /*   These strings are for comparing with checkpoints  */
@@ -182,12 +238,46 @@ int readcheckpoint(FILE *fp, char* filename) {
     printf("Checking for checkpoints !\n");
     if (strcmp(str, findls) == 10){
       ls_text();
+      rewind(fp);
+      fprintf(fp,"ls\ncd\npwd\n"); // Write checkpoint
+      ls_atext();
+      man_text();
+      mkdir_text();
+      rmdir_text();
+      fclose(fp);
+      break;
     }
     else if (strcmp(str, findcd) == 10){
       cd_text();
+      rewind(fp);
+      fprintf(fp,"cd\npwd\n"); // Write checkpoint
+      ls_text();
+      rewind(fp);
+      fprintf(fp,"ls\ncd\npwd\n"); // Write checkpoint
+      ls_atext();
+      man_text();
+      mkdir_text();
+      rmdir_text();
+      fclose(fp);
+      break;
     }
     else if (strcmp(str, findpwd) == 10){
       pwd_text();
+      rewind(fp);
+      fprintf(fp,"pwd\n"); // Write checkpoint
+      pwd_text();
+      cd_text();
+      rewind(fp);
+      fprintf(fp,"cd\npwd\n"); // Write checkpoint
+      ls_text();
+      rewind(fp);
+      fprintf(fp,"ls\ncd\npwd\n"); // Write checkpoint
+      ls_atext();
+      man_text();
+      mkdir_text();
+      rmdir_text();
+      fclose(fp);
+      break;
     }
   }
 }
