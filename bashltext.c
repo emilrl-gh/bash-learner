@@ -227,6 +227,7 @@ int readcheckpoint(FILE *fp, char* filename) {
   char* findpwd = "pwd"; /*                                                     */
   char* findcd = "cd";  /*   These strings are for comparing with checkpoints  */
   char* findls = "ls"; /*                                                     */
+  char* findmkdir = "mkdir"; /*                                               */
   char str[MAXCHAR];
   if (fp == NULL) {
     printf(FONT_BOLD COLOR_RED);
@@ -236,12 +237,22 @@ int readcheckpoint(FILE *fp, char* filename) {
   while (fgets(str, MAXCHAR, fp) != NULL) {
     printf("%s ", str);
     printf("Checking for checkpoints !\n");
-    if (strcmp(str, findls) == 10){
+    if (strcmp(str, findmkdir) == 10){
+      rewind(fp);
+      fprintf(fp,"mkdir\nls\ncd\npwd\n"); // Write checkpoint
+      mkdir_text();
+      rmdir_text();
+      fclose(fp);
+      break;
+    }
+    else if (strcmp(str, findls) == 10){
       ls_text();
       rewind(fp);
       fprintf(fp,"ls\ncd\npwd\n"); // Write checkpoint
       ls_atext();
       man_text();
+      rewind(fp);
+      fprintf(fp,"mkdir\nls\ncd\npwd\n"); // Write checkpoint
       mkdir_text();
       rmdir_text();
       fclose(fp);
@@ -256,6 +267,8 @@ int readcheckpoint(FILE *fp, char* filename) {
       fprintf(fp,"ls\ncd\npwd\n"); // Write checkpoint
       ls_atext();
       man_text();
+      rewind(fp);
+      fprintf(fp,"mkdir\nls\ncd\npwd\n"); // Write checkpoint
       mkdir_text();
       rmdir_text();
       fclose(fp);
@@ -274,6 +287,8 @@ int readcheckpoint(FILE *fp, char* filename) {
       fprintf(fp,"ls\ncd\npwd\n"); // Write checkpoint
       ls_atext();
       man_text();
+      rewind(fp);
+      fprintf(fp,"mkdir\nls\ncd\npwd\n"); // Write checkpoint
       mkdir_text();
       rmdir_text();
       fclose(fp);
