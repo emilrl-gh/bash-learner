@@ -1,13 +1,13 @@
 detected_OS := $(shell uname 2>/dev/null || echo Unknown)
-compile : bash-learner.c
+compile : src/bash-learner.c
 ifeq ($(detected_OS),Darwin)
 			@echo $(detected_OS)
-			gcc -o bash-learner bash-learner.c
+			gcc -o bash-learner src/bash-learner.c
 			./bash-learner
 endif   
 ifeq ($(detected_OS),Linux)
 			@echo $(detected_OS)
-			gcc -o bash-learner bash-learner.c
+			gcc -o bash-learner src/bash-learner.c
 			sudo cp bash-learner /bin
 endif
 uninstall : bash-learner
@@ -24,25 +24,25 @@ update : bash-learner
 	git pull
 ifeq ($(detected_OS),Darwin)
 		@echo $(detected_OS)
-		sudo rm bash-learner
+		sudo rm src/bash-learner
 		@echo "removed old bin"
-		gcc -o bash-learner bash-learner.c
+		gcc -o bash-learner src/bash-learner.c
 		@echo "copying"
 		./bash-learner
 endif
 ifeq ($(detected_OS),Linux)
 		@echo $(detected_OS)
 		sudo rm /bin/bash-learner
-		gcc -o bash-learner bash-learner.c
+		gcc -o bash-learner src/bash-learner.c
 		sudo cp bash-learner /bin
 endif
-workflows : bash-learner.c
+workflows : src/bash-learner.c
 ifeq ($(detected_OS),Darwin)
 			@echo $(detected_OS)
-			gcc -o bash-learner bash-learner.c
+			gcc -o bash-learner src/bash-learner.c
 endif   
 ifeq ($(detected_OS),Linux)
 			@echo $(detected_OS)
-			gcc -o bash-learner bash-learner.c
+			gcc -o bash-learner src/bash-learner.c
 			sudo cp bash-learner /bin
 endif
