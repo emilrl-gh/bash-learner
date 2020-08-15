@@ -21,7 +21,7 @@ If you are on Linux or MacOS after downloading please follow these instructions:
 
 - Open Terminal or the Console.(For MacOS users to open Terminal go to: Applications > Utilities > Terminal"
 - Type: cd Downloads (name of the folder where you downloaded the file)
-- Type on Linux: chmod +x bash-learner-linux 
+- Type on Linux: chmod +x bash-learner-linux
 - Type on Macos: chmod +x bash-learner-macos
 - Then Type, to run: ./bash-learner-linux or ./bash-learner-macos
 
@@ -34,7 +34,7 @@ git clone https://github.com/K0stad1n/bash-learner.git
 then compile the code:
 
 ```
-cd bash_learner
+cd bash_learner/src
 make
 ```
 To run the program:
@@ -65,7 +65,7 @@ In Fedora:
 ```
 sudo dnf install git
 ```
-or 
+or
 ```
 sudo yum install git
 ```
