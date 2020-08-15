@@ -13,6 +13,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: Entering dir
+      run: cd src
     - name: make
       run: make workflows
 
@@ -25,6 +27,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - name: Entering dir
+      run: cd src
     - name: make
       run: make workflows
       
@@ -38,7 +42,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: compile
-      run: gcc bash-learner.c -o bash-learner
+      run: gcc src/bash-learner.c -o bash-learner
     - name: Run 
       run: start bash-learner.exe 
     
