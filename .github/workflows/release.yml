@@ -13,7 +13,7 @@ jobs:
     - name: Creating file
       run: touch build-linux/place.txt
     - name: Build
-      run: gcc bash-learner.c -o build-linux/bash-learner
+      run: gcc src/bash-learner.c -o build-linux/bash-learner
     - name: Zipping 
       run: zip -r bashlearner-ubuntu.zip build-linux
     - name: Upload binaries to release
@@ -40,7 +40,7 @@ jobs:
     - name: Creating file
       run: touch build-macos/place.txt
     - name: Build
-      run: gcc bash-learner.c -o build-macos/bash-learner
+      run: gcc src/bash-learner.c -o build-macos/bash-learner
     - name: Zipping 
       run: zip -r bashlearner-macos.zip build-macos
     - name: Upload binaries to release
@@ -70,7 +70,7 @@ jobs:
     - name: Creating file
       run: touch build-windows/place.txt
     - name: Build
-      run: gcc bash-learner.c -o build-windows/bash-learner
+      run: gcc src/bash-learner.c -o build-windows/bash-learner
     - name: Zipping 
       uses: papeloto/action-zip@v1
       with:
