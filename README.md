@@ -34,7 +34,7 @@ git clone https://github.com/K0stad1n/bash-learner.git
 then compile the code:
 
 ```
-cd bash_learner/src
+cd bash_learner
 make
 ```
 To run the program:
