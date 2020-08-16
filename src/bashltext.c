@@ -109,7 +109,7 @@ void ls_atext(){
   int result; //this interger is used as the output of comparing two strings.
   int result2;
   char str[200]; //str is used as a string to store the checkpoints read in place.txt
-  printf(FONT_BOLD COLOR_YELLOW "%s%s", "Each command has a 'paramater'. Each parameter starts with - for example command + -a -h For example to see everything",
+  printf(FONT_BOLD COLOR_YELLOW "%s%s", "Each command has a 'parameter'. Each parameter starts with - for example command + -a -h For example to see everything",
                                         " in a directory including the ones that start with . you can use the command ls and add the parameter -a. Try it ! (ls -a): \n" ANSI_RESET);
   while(1){
     fgets(st, 200, stdin);
@@ -176,14 +176,14 @@ void mkdir_text(){
     if(result == 10 || result2 == 10){
       sprintf(cmd, "%s\n", st);
       system(cmd);
-      printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the mkdir directory ! \n");
+      printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the mkdir command ! \n");
       break;
     } else {
       printf(FONT_BOLD COLOR_RED "Try again by typing mkdir test: " ANSI_RESET);
       if(result == 10 || result2 == 10){
         sprintf(cmd, "%s\n", st);
         system(cmd);
-        printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the mkdir directory !  \n");
+        printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the mkdir command !  \n");
         break;
       }
     }
@@ -205,14 +205,99 @@ void rmdir_text(){
     if(result == 10 || result2 == 10){
       sprintf(cmd, "%s\n", st);
       system(cmd);
-      printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the rmdir directory ! \n");
+      printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the rmdir command ! \n");
       break;
     } else {
       printf(FONT_BOLD COLOR_RED "Try again by typing rmdir test: " ANSI_RESET);
       if(result == 10 || result2 == 10){
         sprintf(cmd, "%s\n", st);
         system(cmd);
-        printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the rmdir directory !  \n");
+        printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the rmdir command !  \n");
+        break;
+      }
+    }
+  }
+}
+
+void touchtext(){
+  char st[200];//This string is used for getting user input
+  char cmd[100]; //This string is used to run actual commands in the shell.
+  int result; //this interger is used as the output of comparing two strings.
+  int result2;
+  char str[200]; //str is used as a string to store the checkpoints read in place.txt
+  printf(FONT_BOLD COLOR_YELLOW "%s", "To create a file you have to know the touch command. You use it like this touch nameoffile. Try it (type touch testfile)!: \n" ANSI_RESET);
+  while(1){
+    fgets(st, 200, stdin);
+    result = strcmp(st, "touch testfile");
+    result2 = strcmp(st, "touch testfile ");
+    if(result == 10 || result2 == 10){
+      sprintf(cmd, "%s\n", st);
+      system(cmd);
+      printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the touch command ! \n");
+      break;
+    } else {
+      printf(FONT_BOLD COLOR_RED "Try again by typing touch testfile: " ANSI_RESET);
+      if(result == 10 || result2 == 10){
+        sprintf(cmd, "%s\n", st);
+        system(cmd);
+        printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the touch command !  \n");
+        break;
+      }
+    }
+  }
+}
+
+
+void rmtext(){
+  char st[200];//This string is used for getting user input
+  char cmd[100]; //This string is used to run actual commands in the shell.
+  int result; //this interger is used as the output of comparing two strings.
+  int result2;
+  char str[200]; //str is used as a string to store the checkpoints read in place.txt
+  printf(FONT_BOLD COLOR_YELLOW "%s", "To remove a file you have to know the command rm. To remove a file type rm nameoffile. Try it (type rm testfile)!: \n" ANSI_RESET);
+  while(1){
+    fgets(st, 200, stdin);
+    result = strcmp(st, "rm testfile");
+    result2 = strcmp(st, "rm testfile ");
+    if(result == 10 || result2 == 10){
+      sprintf(cmd, "%s\n", st);
+      system(cmd);
+      printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the rm command ! \n");
+      break;
+    } else {
+      printf(FONT_BOLD COLOR_RED "Try again by typing rm testfile: " ANSI_RESET);
+      if(result == 10 || result2 == 10){
+        sprintf(cmd, "%s\n", st);
+        system(cmd);
+        printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the rm command !  \n");
+        break;
+      }
+    }
+  }
+}
+
+void texteditor(){
+  char st[200];//This string is used for getting user input
+  char cmd[100]; //This string is used to run actual commands in the shell.
+  int result; //this interger is used as the output of comparing two strings.
+  int result2;
+  char str[200]; //str is used as a string to store the checkpoints read in place.txt
+  printf(FONT_BOLD COLOR_YELLOW "%s", "To edit files there are many text editors. One of them is nano. Try it (type nano nanotext)!: \n" ANSI_RESET);
+  while(1){
+    fgets(st, 200, stdin);
+    result = strcmp(st, "nano nanotext");
+    result2 = strcmp(st, "nano nanotext ");
+    if(result == 10 || result2 == 10){
+      sprintf(cmd, "%s\n", st);
+      system(cmd);
+      printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the nano command ! \n");
+      break;
+    } else {
+      printf(FONT_BOLD COLOR_RED "Try again by typing nano nanotext: " ANSI_RESET);
+      if(result == 10 || result2 == 10){
+        sprintf(cmd, "%s\n", st);
+        system(cmd);
+        printf(FONT_BOLD COLOR_YELLOW "Good Job! You know how to use the nano command !  \n");
         break;
       }
     }
@@ -259,6 +344,9 @@ void alltext(){
   cd_text();
   man_text();
   rmdir_text();
+  touchtext();
+  rmtext();
+  texteditor();
   fclose(fp);
   exit(0);
 }
@@ -287,8 +375,11 @@ int readcheckpoint(FILE *fp, char* filename) {
       cd_text();
       man_text();
       rmdir_text();
+      touchtext();
+      rmtext();
+      texteditor();
       fclose(fp);
-      break;
+      exit(0);
     }
     else if (strcmp(str, findls) == 10){
       printf("Found checkpoint !\n");
@@ -304,25 +395,22 @@ int readcheckpoint(FILE *fp, char* filename) {
       cd_text();
       man_text();
       rmdir_text();
+      touchtext();
+      rmtext();
+      texteditor();
       fclose(fp);
-      break;
+      exit(0);
     }
     else if (strcmp(str, findcd) == 10){
       printf("Found checkpoint !\n");
-      rewind(fp);
-      fprintf(fp,"ls\n"); // Write checkpoint
-      ls_text();
-      ls_atext();
-      rewind(fp);
-      fprintf(fp,"mkdir\n"); // Write checkpoint
-      mkdir_text();
-      rewind(fp);
-      fprintf(fp,"cd\n"); // Write checkpoint
       cd_text();
       man_text();
       rmdir_text();
+      touchtext();
+      rmtext();
+      texteditor();
       fclose(fp);
-      break;
+      exit(0);
     }
     else if (strcmp(str, findpwd) == 10){
       printf("Found checkpoint !\n");
@@ -340,8 +428,13 @@ int readcheckpoint(FILE *fp, char* filename) {
       cd_text();
       man_text();
       rmdir_text();
+      touchtext();
+      rmtext();
+      texteditor();
       fclose(fp);
-      break;
+      exit(0);
     }
+    return 0;
   }
+  return 0;
 }

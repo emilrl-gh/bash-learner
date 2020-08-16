@@ -1,0 +1,17 @@
+Commands that you have or will learn with each explanation:
+  pwd: Shows in what directory you are in. (Usage: pwd)
+  ls: List files and directories in the directory you are in. (Usage: ls.)
+  mkdir: Create a directory. (Usage: mkdir nameofdirectory)
+  rmdir: Remove a directory. (Usage rmdir nameofdirectory)
+  touch: Create a file. (Usage: touch filename)
+  rm: Remove file. (Usage: rm filename)
+  cd: Enter a directory. (Usage: cd nameofdirectory)
+  cd ..: Leave a directory into the enclosing file of the directory. (Usage: cd ..)
+  man: Manual for each command. (Usage: man nameofcommand)
+  nano: text editor. (Usage: nano filename)
+
+Arguments (nameofcommand -parameter):
+  -h: shows all other parameters of the command.
+
+Parameters for ls:
+  -a: shows all directories and files in directory.
