@@ -14,7 +14,7 @@ jobs:
       run: touch build-linux/place.txt
     - name: Build
       run: gcc src/bash-learner.c -o build-linux/bash-learner
-    - name: Zipping 
+    - name: Zipping
       run: zip -r bashlearner-ubuntu.zip build-linux
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
@@ -22,17 +22,17 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file:  bashlearner-ubuntu.zip
         asset_name: bash-learner-linux.zip
-        tag: v2.1.0
+        tag: v2.1.5
         overwrite: true
         body: "This is the binaries for linux, macOS and Windows"
-  
+
   build-macos:
 
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [macos-latest]
-    
+
     steps:
     - uses: actions/checkout@v2
     - name: Creating build dir
@@ -41,7 +41,7 @@ jobs:
       run: touch build-macos/place.txt
     - name: Build
       run: gcc src/bash-learner.c -o build-macos/bash-learner
-    - name: Zipping 
+    - name: Zipping
       run: zip -r bashlearner-macos.zip build-macos
     - name: Upload binaries to release
       uses: svenstaro/upload-release-action@v2
@@ -49,17 +49,17 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: bashlearner-macos.zip
         asset_name: bash-learner-macos.zip
-        tag: v2.1.0
+        tag: v2.1.5
         overwrite: true
         body: "This is the binaries for linux, macOS and Windows"
-  
+
   build-windows:
-    
+
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [windows-latest]
-        
+
     steps:
     - name: Install 7Zip PowerShell Module
       shell: powershell
@@ -71,7 +71,7 @@ jobs:
       run: touch build-windows/place.txt
     - name: Build
       run: gcc src/bash-learner.c -o build-windows/bash-learner
-    - name: Zipping 
+    - name: Zipping
       uses: papeloto/action-zip@v1
       with:
         files: build-windows
@@ -83,6 +83,6 @@ jobs:
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         file: bash-learner-windows.zip
         asset_name: bash-learner-windows.zip
-        tag: v2.1.0
+        tag: v2.1.5
         overwrite: true
         body: "This is the binaries for linux, macOS and Windows"
